@@ -4,7 +4,7 @@ import { CategoriaComponent } from './globals/pages/categoria/categoria.componen
 
 const routerM:Routes = [
     {path:'', component:HomeComponent},// path vacio para apuntar a home
-    {path:'categora', component:CategoriaComponent}
+    {path:'categoria', component:CategoriaComponent}
 ];
 export const appRouter = RouterModule.forRoot(routerM);
 
