@@ -1,0 +1,16 @@
+ul.menu {
+    display: block;
+    overflow: hidden;
+    li {
+        padding: 5px 10px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        display: inline-block;
+        list-style: none;
+        a {
+            color:blue;
+            text-decoration: none;
+        }
+    }
+}
