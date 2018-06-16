@@ -13,9 +13,12 @@ export class SliderproductoComponent implements OnInit {
 
     for(let i = 0; i< 5; i++){
       let p = new Producto();
+
+      p.id= i;
       p.nombre = `nombre ${i}`; // comillas inclinadas para hacer una interpolaciòn ${variable}
       p.descripcion = `descripcion ${i}`;
-      p.image = `https://loremflickr.com/320/240/cats,dogs`;
+      p.precio = 0;
+      p.image = `https://loremflickr.com/320/240/cats`;
 
       this.productos.push(p);
 

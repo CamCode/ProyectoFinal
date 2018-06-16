@@ -8,9 +8,18 @@ import { Producto } from '../../../../models/producto';
 })
 export class ProductoItemComponent implements OnInit {
   @Input() producto: Producto; //para llaamrlo acà 
+
+  AgregarItem() {
+    console.log(`Agregado ${this.producto.id}:${this.producto.nombre}`);
+
+    //algun proceso aca...
+
+    //disparar el nuevo evento
+  }
+
   constructor() {
 
-   }
+  }
 
   ngOnInit() {
   }
