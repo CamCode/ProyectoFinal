@@ -1,3 +1,5 @@
-<p>
-  sliderproducto works!
-</p>
+<ul>
+  <li *ngFor="let unproducto of productos">
+    <app-producto-item [producto]="unproducto"></app-producto-item>
+  </li>
+</ul>
