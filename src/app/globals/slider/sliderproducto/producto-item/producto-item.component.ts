@@ -1,7 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';//generar input aca
+import { Component, OnInit, Input, Output,  EventEmitter } from '@angular/core';//generar input aca
 import { Producto } from '../../../../models/producto';
 import { checkAndUpdatePureExpressionDynamic } from '@angular/core/src/view/pure_expression';
-import { EventEmitter } from 'events';
+
 
 @Component({
   selector: 'app-producto-item',
@@ -10,20 +10,21 @@ import { EventEmitter } from 'events';
 })
 export class ProductoItemComponent implements OnInit {
   @Input() producto: Producto; //para llaamrlo acà 
-  @Output() anexar : EventEmitter <Producto>();
+  @Output() adicionar = new EventEmitter <Producto>();// nombre del evento 
+  constructor() {
 
+  }
   AgregarItem() {
-    console.log(`Agregado ${this.producto.id}:${this.producto.nombre}`);
+    //console.log(`Agregado ${this.producto.id}:${this.producto.nombre}`);
 
     //algun proceso aca...
 
     //disparar el nuevo evento`
+    this.adicionar.emit(this.producto);
    
   }
 
-  constructor() {
-
-  }
+ 
 
   ngOnInit() {
   }

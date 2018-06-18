@@ -7,11 +7,7 @@ import { Producto } from '../../../models/producto';
   styleUrls: ['./sliderproducto.component.scss']
 })
 export class SliderproductoComponent implements OnInit {
-  @Output() anexar = new EventEmitter <Producto>();
-  anexar(producto:Producto){
-
-  }
-
+  
   productos: Producto[];//Ctrl + space para sugerencias productos es una lista de Producto
   constructor() {
     this.productos = new Array <Producto>();// nuevo arreglo <Template> de (poisiciones)
@@ -28,7 +24,10 @@ export class SliderproductoComponent implements OnInit {
       this.productos.push(p);
     }
    }
-  
+
+   anexar(producto: Producto){
+    console.log(`producto agregado ${producto.id}: ${producto.nombre} ${producto.precio}`);
+    }
   
 
 
